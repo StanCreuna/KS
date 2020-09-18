@@ -1,0 +1,37 @@
+{
+  "mainNavigation": {
+    "links": [
+      {
+        "link": {
+          "text": "Calendar page",
+          "url": "/calendarpage"
+        },
+        "isActive": true
+      },
+      {
+        "link": {
+          "text": "Design settings",
+          "url": "/designsettings"
+        },
+        "isActive": false
+      },
+      {
+        "link": {
+          "text": "External packages",
+          "url": "/externalpackages"
+        },
+        "isActive": false
+      }
+    ]
+  },
+  "logo": {
+    "image": {
+      "src": "/static-site/assets/images/logo.svg",
+      "alt": "logo"
+    },
+    "link": {
+      "openInNewTab": false,
+      "url": "/"
+    }
+  }
+}

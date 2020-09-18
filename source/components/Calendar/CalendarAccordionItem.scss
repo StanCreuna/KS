@@ -1,0 +1,60 @@
+.calendar-accordion-item {
+  position: relative;
+  border: solid #001a58;
+  border-width: 1px 0;
+
+  &:hover {
+    z-index: 1;
+    border-color: #020202;
+  }
+
+  &_active {
+    border-color: #001a58;
+  }
+
+  &_active &__icon-holder {
+    transform: rotate(-180deg);
+  }
+
+  &__button {
+    width: 100%;
+    font-family: $font-source-sans-pro;
+    text-align: left;
+    appearance: none;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 0;
+    padding-left: 0;
+  }
+
+  &__header-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #001a58;
+    padding: 0 15px 0 0;
+  }
+
+  &__icon-holder {
+    flex-shrink: 0;
+    max-width: 16px;
+    transition: transform 0.3s $ease-out;
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #001a58;
+    padding: 0 0 26px;
+  }
+}

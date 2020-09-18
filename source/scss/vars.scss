@@ -1,0 +1,54 @@
+//------------------------------------
+//  BASE
+//------------------------------------
+$website-bg-color: #ffffff !default;
+$content-max-width: 1280px;
+$content-max-width-with-paddings: 1332px;
+$content-padding: 26px;
+
+//------------------------------------
+//  COLORS
+//------------------------------------
+
+$color--ks-black: #444;
+
+// FONTS//
+
+$font-family: arial, sans-serif;
+$font-baskerville: "Baskerville", arial, sans-serif;
+$font-source-sans-pro: "Source Sans Pro", arial, sans-serif;
+$font-futura: "Futura", arial, sans-serif;
+
+//------------------------------------
+// Spacing
+//------------------------------------
+
+$spacing-small: 5px;
+$spacing-medium: 10px;
+$spacing-xmedium: 15px;
+$spacing-xxmedium: 20px;
+$spacing-large: 40px;
+$spacing-xlarge: 30px;
+$spacing-xxlarge: 80px;
+$spacing-giga: 120px;
+$spacing-narrow: 220px;
+
+//------------------------------------
+// Animation
+//------------------------------------
+
+$transition--default: all 0.25s ease;
+$ease-out: cubic-bezier(0.22, 0.57, 0.25, 1);
+$ease-in: cubic-bezier(0.62, 0, 0.85, 0.68);
+$ease-in-out: cubic-bezier(0.65, 0.09, 0.06, 1);
+
+//------------------------------------
+// Media queries
+//------------------------------------
+
+$mobile-xs: 320px;
+$mobile-small: 460px;
+$mobile-max: 889px;
+$tablet-min: 890px;
+$tablet-max: 1280px;
+$desktop-min: 1281px;

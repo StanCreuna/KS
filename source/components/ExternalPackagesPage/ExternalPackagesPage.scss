@@ -1,0 +1,28 @@
+.external-packages-page {
+  &__container {
+    max-width: 600px;
+    padding: 70px 25px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  &__heading-intro {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 40px;
+  }
+
+  &__text-item {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0 0 15px;
+  }
+}

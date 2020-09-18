@@ -1,0 +1,19 @@
+.calendar-poor-text {
+  * {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}

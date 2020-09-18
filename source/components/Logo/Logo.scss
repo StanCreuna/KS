@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &_main {
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+  }
+}

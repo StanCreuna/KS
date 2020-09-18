@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+
+#mount-point {
+  width: 100%;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  max-width: $content-max-width-with-paddings;
+  padding: 0 $content-padding 113px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+  font-weight: normal;
+  color: #444;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 52px;
+
+  @include breakpoint-mobile {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 46px;
+
+  @include breakpoint-mobile {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+
+  @include breakpoint-mobile {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 28px;
+
+  @include breakpoint-mobile {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+
+  @include breakpoint-mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+
+  @include breakpoint-mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.mouse-user * {
+  outline: none;
+}

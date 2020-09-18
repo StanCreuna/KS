@@ -1,0 +1,55 @@
+.calendar-page {
+  &__heading-container {
+    padding-left: 30px;
+    border-left: 1px solid #d2d2d2;
+    margin: 70px 0 36px 312px;
+
+    @include breakpoint-tablet {
+      width: 78%;
+      margin: 70px 0 36px 22%;
+    }
+
+    @include breakpoint-mobile {
+      width: 100%;
+      border: none;
+      padding-left: 0;
+      margin: 40px 0;
+    }
+  }
+
+  &__heading {
+    max-width: 870px;
+    font-family: $font-futura;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 70px;
+    margin: 0 0 20px;
+
+    @include breakpoint-mobile-small {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include breakpoint-mobile-xs {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+
+  &__heading-intro {
+    display: block;
+    max-width: 870px;
+    font-family: $font-source-sans-pro;
+    font-size: 26px;
+    line-height: 36px;
+
+    @include breakpoint-mobile-xs {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__content {
+    width: 100%; // just to skip ESLint warning.
+  }
+}

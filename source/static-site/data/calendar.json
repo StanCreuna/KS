@@ -1,0 +1,163 @@
+{
+  "header": {
+    "heading1": "Kalender",
+    "heading2": "Aktivitet"
+  },
+  "monthDefault": {
+    "inactiveLabel": "Ingen aktiviteter å vise",
+    "additionalInfoLabel": "Nedlastninger",
+    "additionalInfoIsEmptyLabel": "Ingen nedlastninger",
+    "attentionImage": "/static-site/assets/images/attention-image.svg",
+    "fileImage": "/static-site/assets/images/file-image.svg",
+    "dropdownImage": "/static-site/assets/images/dropdown-image.svg",
+    "monthInfoImage": "/static-site/assets/images/month-main-image-info.svg",
+    "monthFilesImage": "/static-site/assets/images/month-main-image-files.svg",
+    "monthInactiveImage": "/static-site/assets/images/month-main-image-inactive.svg",
+    "externalLinkImage": "/static-site/assets/images/external-link-image.svg",
+    "downloadLinkImage": "/static-site/assets/images/download-link-image.svg"
+  },
+  "monthList": [
+    {
+      "name": "Test",
+      "customImage": "/static-site/assets/images/jul.png",
+      "customImageWidth": "51"
+    },
+    {
+      "name": "Test2",
+      "heading": "Lorem ipsum",
+      "textHtml": "Deltakelse i <b>poltisike</b> fora og møter på ulike nivå i partenrskapet sirkrer bevistthet om viktige saker for Nav i kommunens budsjettarbeid",
+      "downloadLinks": [
+        {
+          "download": true,
+          "url": "/static-site/assets/images/test.pdf",
+          "text": "Test PDF"
+        }
+      ]
+    },
+    {
+      "name": "Jan",
+      "heading": "Mål og disponeringsbrev og kommunebrev",
+      "textHtml": "Mål og disponeringsbrev og kommune­brevet gir begge eiere føringer for året. Partnerskapet kan bruke dette strategisk ved å løfte utvalgte grupper eller områder.",
+      "externalLinks": [
+        {
+          "openInNewTab": true,
+          "url": "https://www.google.com/",
+          "text": "Lenke til mål- og disponeringsbrev og kommunebrev"
+        }
+      ]
+    },
+    {
+      "name": "Feb",
+      "heading": "Mal for gjennomføring av partnerskapsmøte",
+      "textHtml": "Nav-leder sikres tydelige forventninger ved egen lederavtale med eierne. Felles virksomhetsplan gjennomgås. En analyse av utfordringene ved hvert kontor gir en rask innsikt i utfordringene. Årlig aktivitet.",
+      "downloadLinks": [
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Mal til pdf felles virksomhetsplan"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Analysemodell på nettsiden til ks"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Gjensidig lederavtale"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Mal for analyse av partnerskapet"
+        }
+      ]
+    },
+    {
+      "name": "Mar",
+      "customImage": "/static-site/assets/images/mar.png",
+      "customImageWidth": "130" 
+    },
+    {
+      "name": "Apr",
+      "heading": "Nav-kontorets eller verst­kommune - områdets arbeid på politisk dagsorden",
+      "textHtml": "Politiske fora Nav-leder må engasjere seg i relevante politiske fora. Økt bevissthet og kunnskap i politisk ledelse om Nav-kontorets utfordringer, tjenestetilbud og rammer kan styrke det politiske eierskapet i kommunen."
+    },
+    {
+      "name": "Mai",
+      "customImage": "/static-site/assets/images/mai.png",
+      "customImageWidth": "82"
+    },
+    {
+      "name": "Jun",
+      "heading": "Husk: kommunens oppstart av budsjett-arbeid",
+      "textHtml": "Deltakelse i poltisike fora og møter på ulike nivå i partenrskapet sirkrer bevistthet om viktige saker for Nav i kommunens budsjettarbeid"
+    },
+    {
+      "name": "Jul",
+      "customImage": "/static-site/assets/images/jul.png",
+      "customImageWidth": "51"
+    },
+    {
+      "name": "Aug",
+      "heading": "Analyser utfordringene for Nav-kontoret eller vertskommuneområdet",
+      "textHtml": "En analyse av partnerskapet gir et raskt overblikk over utfordringene.",
+      "downloadLinks": [
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Åpne lenke"
+        }
+      ]
+    },
+    {
+      "name": "Sept",
+      "heading": "Mal for gjennomføring av partnerskapsmøte",
+      "textHtml": "Nav-leder sikres tydelige forventinger ved egen lederavtale med eierne. Felles virksomhetsplan gjennomgås. En analyse av utfordringene ved hvert kontor gir en rask innsikt i utfordringene. Klikk her for å komme til analysemodellen.",
+      "downloadLinks": [
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Mal til pdf felles virksomhetsplan"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Analysemodell på nettsiden til ks"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Gjensidig lederavtale"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Mal for analyse av partnerskapet"
+        }
+      ]
+    },
+    {
+      "name": "Okt",
+      "heading": "Nav-kontorets eller verst­kommuneområdets arbeid på politisk dagsorden",
+      "textHtml": "Politiske fora Nav-leder må engasjere seg i relevante politiske fora. Økt bevissthet og kunnskap i politisk ledelse om Nav-kontorets utfordringer, tjenestetilbud og rammer kan styrke det politiske eierskapet i kommunen.",
+      "downloadLinks": [
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Åpne lenke"
+        }
+      ]
+    },
+    {
+      "name": "Nov",
+      "heading": "Statsbudsjettet legges frem",
+      "textHtml": " "
+    },
+    {
+      "name": "Des",
+      "heading": "Nav fylkesdirektører mottar foreløpig mål-og disponeringsbrev",
+      "textHtml": "Mål- og disponeringsbrevet fastsetter mål og resultatkrav, budsjettrammer, fullmakter og krav om rapportering til enhetene i Arbeids- og velferdsetaten. Et foreløpig brev sendes mot slutten av året."
+    }
+  ]
+}

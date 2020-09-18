@@ -1,0 +1,96 @@
+.calendar-month {
+  position: relative;
+  max-width: 541px;
+  width: 100%;
+  min-height: 108px;
+  background: #f3f3f3;
+  padding: 17px 53px 21px 101px;
+  border-radius: 17px;
+  margin: 0 auto 15px 0;
+
+  &:nth-child(odd) {
+    margin: 0 0 15px auto;
+  }
+
+  &__main-icon-holder {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 54px;
+    max-width: 54px;
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #001a58;
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  &__footer {
+    position: relative;
+    padding: 12px 80px 0 0;
+  }
+
+  &__footer-label {
+    display: block;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    color: #001a58;
+  }
+
+  &__footer-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 0 0;
+  }
+
+  &__footer-link-item {
+    display: flex;
+    width: 100%;
+    max-width: 49%;
+  }
+
+  &__footer-link-icon-holder {
+    display: inline-block;
+    vertical-align: baseline;
+    max-width: 8px;
+    margin-left: 5px;
+  }
+
+  &__footer-icon-holder {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    max-width: 32px;
+  }
+
+  &__inactive-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #001a58;
+    padding: 17px 53px 21px 101px;
+  }
+
+  &__custom-image-holder {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+  }
+}

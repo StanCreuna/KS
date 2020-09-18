@@ -1,0 +1,16 @@
+.calendar-icon {
+  height: auto;
+  max-width: inherit;
+  pointer-events: none;
+
+  // ReactSVG creates structure span > span > svg
+  // we can't set class on last span and svg directly
+  // that's why we use nesting
+  span,
+  svg {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    height: inherit;
+  }
+}

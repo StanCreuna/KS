@@ -1,0 +1,18 @@
+.calendar-header {
+  padding: 0 0 13px;
+
+  &__heading {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 14px;
+    color: #001a58;
+
+    &_main {
+      margin-left: 13px;
+    }
+
+    &_secondary {
+      margin-left: 51px;
+    }
+  }
+}

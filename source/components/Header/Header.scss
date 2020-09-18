@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: $content-max-width;
+  height: 113px;
+  background: #e1eced;
+  border-bottom: 1px solid #25918f;
+  padding: 25px 0 0;
+  margin: 0 auto;
+
+  @include breakpoint-tablet {
+    width: calc(100% - 52px);
+    justify-content: center;
+    margin: 0 26px;
+  }
+
+  @include breakpoint-mobile {
+    width: calc(100% - 52px);
+    justify-content: center;
+    height: 60px;
+    padding: 10px 0;
+    margin: 0 26px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: #e1eced;
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+  }
+
+  &__logo {
+    width: 116px;
+
+    @include breakpoint-mobile {
+      width: 80px;
+    }
+  }
+}

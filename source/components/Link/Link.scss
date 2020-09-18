@@ -1,0 +1,9 @@
+.link {
+  color: inherit;
+  font-size: inherit;
+
+  &:hover,
+  &_active {
+    text-decoration: none;
+  }
+}

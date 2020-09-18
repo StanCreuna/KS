@@ -1,0 +1,53 @@
+$font-size-base: 16px;
+//------------------------------------
+//  FUNCTIONS
+//------------------------------------
+
+$responsive-desktop-size-max: 1440;
+$responsive-desktop-size-min: 1024;
+
+//   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+// 1440/1024 = 0,7111111111
+
+@function calc-responsive-desktop($min,$max) {
+  $result: calc($min + ($max - $min) * ((100vw - $responsive-desktop-size-min / ($responsive-desktop-size-min / $responsive-desktop-size-max))));
+
+  @return $result;
+}
+
+//
+// Calculates proper rem font-size given
+// a pixel amount.
+//
+@function calculate-rem($font-size) {
+  $rem-size: ($font-size / $base-font-size) * 1rem;
+
+  @return $rem-size;
+}
+
+//
+// Calculates proper line-height given a
+// font-size to maintain vertical rhythm.
+//
+@function calculate-line-height($font-size) {
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+
+  @return $line-height-size;
+}
+
+//
+// Strips the units from a value (px, em, etc).
+//
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $font-size-base) {
+  $value: strip-units($value) / strip-units($base-value) * 1rem;
+
+  @if ($value == 0) {
+    $value: 0;
+  } // Turn 0rem into 0
+
+  @return $value;
+}

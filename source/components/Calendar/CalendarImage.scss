@@ -1,0 +1,82 @@
+/*Image sizes*/
+
+@mixin object-fit($fit: cover, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+  }
+  height: 100%;
+  width: 100%;
+  display: block;
+  backface-visibility: hidden;
+  transition: transform 0.35s;
+}
+
+@mixin fixed-proportion-image($width, $height) {
+  height: 0px;
+  padding-bottom: ($height / $width) * 100%;
+  //background: none !important;
+  position: relative;
+
+  .calendar-image__img {
+    @include object-fit(cover, center);
+    position: absolute;
+  }
+}
+
+@mixin fixed-proportion($width, $height) {
+  padding-bottom: ($height / $width) * 100%;
+}
+
+@mixin fixed-height-image($width, $height) {
+  height: ($height) + px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  .calendar-image__img {
+    @include object-fit(cover, center);
+  }
+}
+
+@mixin fluid-image() {
+  padding: 0px;
+  @include full-size;
+  background-position: center;
+  background-size: cover;
+  max-width: none;
+
+  .calendar-image__img {
+    opacity: 0;
+  }
+}
+
+@mixin original-proportions-image($width, $height) {
+  padding: 0;
+  height: auto;
+  .calendar-image__img {
+    position: relative;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.calendar-image {
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &_fluid {
+    @include fluid-image();
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
