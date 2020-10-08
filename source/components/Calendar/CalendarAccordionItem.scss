@@ -26,6 +26,10 @@
     border: none;
     margin-bottom: 0;
     cursor: pointer;
+
+    &_disabled {
+      cursor: default;
+    }
   }
 
   &__header {

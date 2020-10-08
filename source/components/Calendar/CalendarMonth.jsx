@@ -14,7 +14,6 @@ const CalendarMonth = ({
   downloadLinks,
   inactiveLabel,
   additionalInfoLabel,
-  additionalInfoIsEmptyLabel,
   attentionImage,
   fileImage,
   dropdownImage,
@@ -29,7 +28,6 @@ const CalendarMonth = ({
     name &&
     inactiveLabel &&
     additionalInfoLabel &&
-    additionalInfoIsEmptyLabel &&
     attentionImage &&
     fileImage &&
     dropdownImage &&
@@ -39,7 +37,7 @@ const CalendarMonth = ({
     externalLinkImage &&
     downloadLinkImage;
 
-  const isInactive = !(heading && textHtml);
+  const isInactive = !heading;
   const isLinksPresent = externalLinks && externalLinks.length > 0;
   const isFilesPresent = downloadLinks && downloadLinks.length > 0;
   const isInformative = !isInactive && !isFilesPresent;
@@ -63,7 +61,7 @@ const CalendarMonth = ({
           <CalendarIcon url={calendarIconUrl} />
           <span className="calendar-month__name">{name}</span>
         </div>
-        {heading && textHtml && (
+        {heading && (
           <Fragment>
             <CalendarAccordionItem
               label={heading}
@@ -71,13 +69,11 @@ const CalendarMonth = ({
               dropdownImage={dropdownImage}
               htmlId={id}
             />
-            <div className="calendar-month__footer">
-              <span className="calendar-month__footer-label">
-                {isFooterFilled
-                  ? additionalInfoLabel
-                  : additionalInfoIsEmptyLabel}
-              </span>
-              {isFooterFilled && (
+            {isFooterFilled && (
+              <div className="calendar-month__footer">
+                <span className="calendar-month__footer-label">
+                  {additionalInfoLabel}
+                </span>
                 <div className="calendar-month__footer-links-list">
                   {linksList.map((link, index) => (
                     <div
@@ -92,13 +88,11 @@ const CalendarMonth = ({
                     </div>
                   ))}
                 </div>
-              )}
-              {isFooterFilled && (
                 <div className="calendar-month__footer-icon-holder">
                   <CalendarIcon url={footerImage} />
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </Fragment>
         )}
         {isInactive && (
@@ -129,7 +123,6 @@ CalendarMonth.propTypes = {
   downloadLinks: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
   inactiveLabel: PropTypes.string,
   additionalInfoLabel: PropTypes.string,
-  additionalInfoIsEmptyLabel: PropTypes.string,
   attentionImage: PropTypes.string,
   fileImage: PropTypes.string,
   dropdownImage: PropTypes.string,

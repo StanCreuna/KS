@@ -16,7 +16,9 @@ const CalendarAccordionItem = ({ label, textHtml, dropdownImage, htmlId }) => {
       })}
     >
       <button
-        className="calendar-accordion-item__button"
+        className={cn('calendar-accordion-item__button', {
+          'calendar-accordion-item__button_disabled': !textHtml,
+        })}
         aria-controls={htmlId}
         aria-expanded={isExpanded}
         onClick={toggle}
@@ -24,27 +26,31 @@ const CalendarAccordionItem = ({ label, textHtml, dropdownImage, htmlId }) => {
       >
         <div className="calendar-accordion-item__header">
           <div className="calendar-accordion-item__header-text">{label}</div>
-          <div className="calendar-accordion-item__icon-holder">
-            <CalendarIcon
-              url={dropdownImage}
-              className={cn('calendar-accordion-item__icon', {
-                'calendar-accordion-item__icon_expanded': isExpanded,
-              })}
-            />
-          </div>
+          {textHtml && (
+            <div className="calendar-accordion-item__icon-holder">
+              <CalendarIcon
+                url={dropdownImage}
+                className={cn('calendar-accordion-item__icon', {
+                  'calendar-accordion-item__icon_expanded': isExpanded,
+                })}
+              />
+            </div>
+          )}
         </div>
       </button>
 
-      <Collapse
-        componentProps={{ id: htmlId }}
-        isOpen={isExpanded}
-        duration={400}
-        easing="cubic-bezier(.02, .01, .47, 1)"
-      >
-        <div className="calendar-accordion-item__content">
-          {textHtml && <CalendarPoorText text={textHtml} />}
-        </div>
-      </Collapse>
+      {textHtml && (
+        <Collapse
+          componentProps={{ id: htmlId }}
+          isOpen={isExpanded}
+          duration={400}
+          easing="cubic-bezier(.02, .01, .47, 1)"
+        >
+          <div className="calendar-accordion-item__content">
+            {textHtml && <CalendarPoorText text={textHtml} />}
+          </div>
+        </Collapse>
+      )}
     </div>
   );
 };

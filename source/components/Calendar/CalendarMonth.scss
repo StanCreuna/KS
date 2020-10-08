@@ -48,16 +48,19 @@
   }
 
   &__footer-links-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 8px 0 0;
+    overflow: hidden;
   }
 
   &__footer-link-item {
+    float: left;
     display: flex;
     width: 100%;
     max-width: 49%;
+
+    &:nth-child(even) {
+      float: right;
+    }
   }
 
   &__footer-link-icon-holder {
