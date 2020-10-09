@@ -8,16 +8,32 @@
   border-radius: 17px;
   margin: 0 auto 36px 0;
 
+  @include breakpoint-mobile {
+    min-height: 78px;
+    padding: 14px 13px 19px 59px;
+    margin: 0 auto 23px 0;
+  }
+
   &:nth-child(odd) {
     margin: 0 0 36px auto;
+
+    @include breakpoint-mobile {
+      margin: 0 0 23px auto;
+    }
   }
 
   &__main-icon-holder {
     position: absolute;
     top: 15px;
     left: 20px;
-    width: 54px;
+    width: 100%;
     max-width: 54px;
+
+    @include breakpoint-mobile {
+      top: 12px;
+      left: 6px;
+      max-width: 41px;
+    }
   }
 
   &__name {
@@ -32,12 +48,25 @@
     color: #001a58;
     text-align: center;
     margin-top: -5px;
+
+    @include breakpoint-mobile {
+      font-size: 14px;
+    }
   }
 
   &__footer {
     position: relative;
     padding: 0 80px 0 0;
     margin: 32px 0 0;
+
+    @include breakpoint-mobile {
+      padding: 0 53px 0 0;
+      margin: 14px 0 0;
+    }
+
+    @include breakpoint-mobile-small {
+      padding: 0 40px 0 0;
+    }
   }
 
   &__footer-label {
@@ -46,23 +75,69 @@
     font-size: 13px;
     line-height: 16px;
     color: #001a58;
+
+    @include breakpoint-mobile {
+      font-weight: 600;
+      font-size: 8px;
+      line-height: 10px;
+    }
   }
 
   &__footer-links-list {
     padding: 8px 0 0;
     overflow: hidden;
+
+    @include breakpoint-mobile {
+      padding: 6px 0 0;
+    }
+  }
+
+  &__footer-links-even,
+  &__footer-links-odd {
+    float: left;
+    width: 50%;
+
+    @include breakpoint-mobile-small {
+      float: none;
+      width: 100%;
+      padding: 0 !important;
+    }
+  }
+
+  &__footer-links-even {
+    padding: 0 0 0 10px;
+
+    @include breakpoint-mobile {
+      padding: 0 0 0 5px;
+    }
+  }
+
+  &__footer-links-odd {
+    padding: 0 10px 0 0;
+
+    @include breakpoint-mobile {
+      padding: 0 5px 0 0;
+    }
   }
 
   &__footer-link-item {
-    float: left;
     display: flex;
-    width: 100%;
-    max-width: 50%;
-    padding: 0 10px 0 0;
+    margin: 0 0 4px;
 
-    &:nth-child(even) {
-      float: right;
-      padding: 0 0 0 10px;
+    @include breakpoint-mobile {
+      margin: 0 0 2px;
+    }
+
+    @include breakpoint-mobile-small {
+      margin: 0 0 1px;
+    }
+
+    &:last-child {
+      margin: 0;
+
+      @include breakpoint-mobile-small {
+        margin: 0 0 1px;
+      }
     }
   }
 
@@ -71,6 +146,11 @@
     vertical-align: baseline;
     max-width: 12px;
     margin-left: 10px;
+
+    @include breakpoint-mobile {
+      max-width: 8px;
+      margin-left: 6px;
+    }
   }
 
   &__footer-icon-holder {
@@ -78,6 +158,11 @@
     top: -10px;
     right: 0;
     max-width: 60px;
+
+    @include breakpoint-mobile {
+      top: 2px;
+      max-width: 32px;
+    }
   }
 
   &__inactive-label {
@@ -88,15 +173,39 @@
     left: 0;
     display: flex;
     align-items: center;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #001a58;
     padding: 20px 42px 20px 144px;
+
+    @include breakpoint-mobile {
+      font-size: 10px;
+      line-height: 14px;
+      padding: 14px 13px 19px 81px;
+    }
   }
 
   &__custom-image-holder {
     position: absolute;
     right: 40px;
     bottom: 0;
+
+    @include breakpoint-mobile-small {
+      right: 12px;
+    }
+  }
+
+  &__custom-image {
+    width: 100%;
+
+    @include breakpoint-mobile {
+      width: 80%;
+      margin: 0 0 0 auto;
+    }
+
+    @include breakpoint-mobile-small {
+      width: 70%;
+    }
   }
 }

@@ -46,6 +46,8 @@ const CalendarMonth = ({
   const isFooterFilled = isLinksPresent || isFilesPresent;
   const linksList =
     (isLinksPresent && externalLinks) || (isFilesPresent && downloadLinks);
+  const evenLinks = linksList && linksList.filter((v, i) => i % 2);
+  const oddLinks = linksList && linksList.filter((v, i) => !(i % 2));
   const linkImage =
     (isLinksPresent && externalLinkImage) ||
     (isFilesPresent && downloadLinkImage);
@@ -79,18 +81,34 @@ const CalendarMonth = ({
                     : additionalInfoDownloadsLabel}
                 </span>
                 <div className="calendar-month__footer-links-list">
-                  {linksList.map((link, index) => (
-                    <div
-                      className="calendar-month__footer-link-item"
-                      key={index}
-                    >
-                      <CalendarLink {...link}>
-                        <span className="calendar-month__footer-link-icon-holder">
-                          <CalendarIcon url={linkImage} />
-                        </span>
-                      </CalendarLink>
-                    </div>
-                  ))}
+                  <div className="calendar-month__footer-links-odd">
+                    {oddLinks.map((link, index) => (
+                      <div
+                        className="calendar-month__footer-link-item"
+                        key={index}
+                      >
+                        <CalendarLink {...link}>
+                          <span className="calendar-month__footer-link-icon-holder">
+                            <CalendarIcon url={linkImage} />
+                          </span>
+                        </CalendarLink>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="calendar-month__footer-links-even">
+                    {evenLinks.map((link, index) => (
+                      <div
+                        className="calendar-month__footer-link-item"
+                        key={index}
+                      >
+                        <CalendarLink {...link}>
+                          <span className="calendar-month__footer-link-icon-holder">
+                            <CalendarIcon url={linkImage} />
+                          </span>
+                        </CalendarLink>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="calendar-month__footer-icon-holder">
                   <CalendarIcon url={footerImage} />
@@ -109,7 +127,9 @@ const CalendarMonth = ({
             className="calendar-month__custom-image-holder"
             style={{ width: `${customImageWidth}px` }}
           >
-            <CalendarIcon url={customImage} />
+            <div className="calendar-month__custom-image">
+              <CalendarIcon url={customImage} />
+            </div>
           </div>
         )}
       </div>

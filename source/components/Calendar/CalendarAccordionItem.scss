@@ -38,6 +38,10 @@
     justify-content: space-between;
     padding: 20px 0;
     padding-left: 0;
+
+    @include breakpoint-mobile {
+      padding: 16px 0;
+    }
   }
 
   &__header-text {
@@ -46,12 +50,22 @@
     line-height: 28px;
     color: #001a58;
     padding: 0 15px 0 0;
+
+    @include breakpoint-mobile {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 10px 0 0;
+    }
   }
 
   &__icon-holder {
     flex-shrink: 0;
     max-width: 25px;
     transition: transform 0.3s $ease-out;
+
+    @include breakpoint-mobile {
+      max-width: 14px;
+    }
   }
 
   &__content {
@@ -60,5 +74,11 @@
     line-height: 28px;
     color: #001a58;
     padding: 0 30px 20px 0;
+
+    @include breakpoint-mobile {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 25px 16px 0;
+    }
   }
 }

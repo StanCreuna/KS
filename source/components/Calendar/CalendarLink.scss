@@ -8,6 +8,11 @@
   color: #001a58;
   text-decoration: none;
 
+  @include breakpoint-mobile {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
   &:hover,
   &_active {
     text-decoration: underline;
