@@ -11,6 +11,9 @@ const CalendarLink = ({
   tabindex,
   children,
 }) => {
+  const words = text.split(' ');
+  const lastWordIndex = words.length - 1;
+
   return url ? (
     <a
       href={url}
@@ -21,13 +24,21 @@ const CalendarLink = ({
       tabIndex={tabindex}
       download={download}
     >
-      {text}
-      {children}
+      {words.map((word, index) => (
+        <span key={index} className="calendar-link__word">
+          {word}
+          {lastWordIndex === index && children}
+        </span>
+      ))}
     </a>
   ) : (
     <Fragment>
-      {text}
-      {children}
+      {words.map((word, index) => (
+        <span key={index} className="calendar-link__word">
+          {word}
+          {lastWordIndex === index && children}
+        </span>
+      ))}
     </Fragment>
   );
 };

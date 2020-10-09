@@ -13,7 +13,8 @@ const CalendarMonth = ({
   externalLinks,
   downloadLinks,
   inactiveLabel,
-  additionalInfoLabel,
+  additionalInfoDownloadsLabel,
+  additionalInfoLinksLabel,
   attentionImage,
   fileImage,
   dropdownImage,
@@ -27,7 +28,8 @@ const CalendarMonth = ({
   const isVisible =
     name &&
     inactiveLabel &&
-    additionalInfoLabel &&
+    additionalInfoDownloadsLabel &&
+    additionalInfoLinksLabel &&
     attentionImage &&
     fileImage &&
     dropdownImage &&
@@ -72,7 +74,9 @@ const CalendarMonth = ({
             {isFooterFilled && (
               <div className="calendar-month__footer">
                 <span className="calendar-month__footer-label">
-                  {additionalInfoLabel}
+                  {isLinksPresent
+                    ? additionalInfoLinksLabel
+                    : additionalInfoDownloadsLabel}
                 </span>
                 <div className="calendar-month__footer-links-list">
                   {linksList.map((link, index) => (
@@ -122,7 +126,8 @@ CalendarMonth.propTypes = {
   externalLinks: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
   downloadLinks: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
   inactiveLabel: PropTypes.string,
-  additionalInfoLabel: PropTypes.string,
+  additionalInfoDownloadsLabel: PropTypes.string,
+  additionalInfoLinksLabel: PropTypes.string,
   attentionImage: PropTypes.string,
   fileImage: PropTypes.string,
   dropdownImage: PropTypes.string,

@@ -1,6 +1,6 @@
 .calendar-accordion-item {
   position: relative;
-  border: solid #001a58;
+  border: solid #98a2b9;
   border-width: 1px 0;
 
   &:hover {
@@ -9,7 +9,7 @@
   }
 
   &_active {
-    border-color: #001a58;
+    border-color: #98a2b9;
   }
 
   &_active &__icon-holder {
@@ -36,29 +36,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 23px 0;
+    padding: 20px 0;
     padding-left: 0;
   }
 
   &__header-text {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 24px;
+    line-height: 28px;
     color: #001a58;
     padding: 0 15px 0 0;
   }
 
   &__icon-holder {
     flex-shrink: 0;
-    max-width: 16px;
+    max-width: 25px;
     transition: transform 0.3s $ease-out;
   }
 
   &__content {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 24px;
+    line-height: 28px;
     color: #001a58;
-    padding: 0 0 26px;
+    padding: 0 30px 20px 0;
   }
 }

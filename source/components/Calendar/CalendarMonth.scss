@@ -1,21 +1,21 @@
 .calendar-month {
   position: relative;
-  max-width: 541px;
+  max-width: 888px;
   width: 100%;
   min-height: 108px;
   background: #f3f3f3;
-  padding: 17px 53px 21px 101px;
+  padding: 20px 42px 20px 116px;
   border-radius: 17px;
-  margin: 0 auto 15px 0;
+  margin: 0 auto 36px 0;
 
   &:nth-child(odd) {
-    margin: 0 0 15px auto;
+    margin: 0 0 36px auto;
   }
 
   &__main-icon-holder {
     position: absolute;
-    top: 10px;
-    left: 8px;
+    top: 15px;
+    left: 20px;
     width: 54px;
     max-width: 54px;
   }
@@ -36,14 +36,15 @@
 
   &__footer {
     position: relative;
-    padding: 12px 80px 0 0;
+    padding: 0 80px 0 0;
+    margin: 32px 0 0;
   }
 
   &__footer-label {
     display: block;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
     color: #001a58;
   }
 
@@ -56,25 +57,27 @@
     float: left;
     display: flex;
     width: 100%;
-    max-width: 49%;
+    max-width: 50%;
+    padding: 0 10px 0 0;
 
     &:nth-child(even) {
       float: right;
+      padding: 0 0 0 10px;
     }
   }
 
   &__footer-link-icon-holder {
     display: inline-block;
     vertical-align: baseline;
-    max-width: 8px;
-    margin-left: 5px;
+    max-width: 12px;
+    margin-left: 10px;
   }
 
   &__footer-icon-holder {
     position: absolute;
-    top: 22px;
+    top: -10px;
     right: 0;
-    max-width: 32px;
+    max-width: 60px;
   }
 
   &__inactive-label {
@@ -85,10 +88,10 @@
     left: 0;
     display: flex;
     align-items: center;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 24px;
     color: #001a58;
-    padding: 17px 53px 21px 101px;
+    padding: 20px 42px 20px 144px;
   }
 
   &__custom-image-holder {

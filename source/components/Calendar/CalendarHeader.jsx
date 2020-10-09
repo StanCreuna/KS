@@ -1,25 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CalendarHeader = ({ heading1, heading2 }) => {
+const CalendarHeader = ({ heading }) => {
   return (
-    heading1 &&
-    heading2 && (
+    heading && (
       <div className="calendar-header">
-        <span className="calendar-header__heading calendar-header__heading_main">
-          {heading1}
-        </span>
-        <span className="calendar-header__heading calendar-header__heading_secondary">
-          {heading2}
-        </span>
+        <span className="calendar-header__heading">{heading}</span>
       </div>
     )
   );
 };
 
 CalendarHeader.propTypes = {
-  heading1: PropTypes.string.isRequired,
-  heading2: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
 };
 
 export default CalendarHeader;

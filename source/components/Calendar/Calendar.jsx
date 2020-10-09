@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import CalendarHeader from './CalendarHeader';
 import CalendarMonth from './CalendarMonth';
 
-const Calendar = ({ header, monthList, monthDefault }) => {
+const Calendar = ({ heading, monthList, monthDefault }) => {
   return (
     <div className="calendar">
-      <CalendarHeader {...header} />
+      <CalendarHeader heading={heading} />
       {monthList &&
         monthList.map((month, index) => {
           return (
@@ -23,12 +23,12 @@ const Calendar = ({ header, monthList, monthDefault }) => {
 };
 
 Calendar.propTypes = {
-  header: PropTypes.exact(CalendarHeader.propTypes),
+  heading: PropTypes.string.isRequired,
   monthList: PropTypes.arrayOf(PropTypes.exact(CalendarMonth.propTypes)),
   monthDefault: PropTypes.shape({
     inactiveLabel: PropTypes.string.isRequired,
-    additionalInfoLabel: PropTypes.string.isRequired,
-    additionalInfoIsEmptyLabel: PropTypes.string.isRequired,
+    additionalInfoDownloadsLabel: PropTypes.string.isRequired,
+    additionalInfoLinksLabel: PropTypes.string.isRequired,
     attentionImage: PropTypes.string.isRequired,
     fileImage: PropTypes.string.isRequired,
     dropdownImage: PropTypes.string.isRequired,
