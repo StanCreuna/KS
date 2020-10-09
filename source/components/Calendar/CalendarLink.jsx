@@ -4,9 +4,9 @@ import cn from 'classnames';
 
 const CalendarLink = ({
   openInNewTab,
-  download,
   url,
   text,
+  isDownload,
   className,
   tabindex,
   children,
@@ -22,7 +22,7 @@ const CalendarLink = ({
       })}
       target={openInNewTab ? '_blank' : null}
       tabIndex={tabindex}
-      download={download}
+      download={isDownload}
     >
       {words.map((word, index) => (
         <span key={index} className="calendar-link__word">
@@ -45,15 +45,16 @@ const CalendarLink = ({
 
 CalendarLink.propTypes = {
   openInNewTab: PropTypes.bool,
-  download: PropTypes.bool,
   url: PropTypes.string,
   text: PropTypes.string,
+  isDownload: PropTypes.bool,
   className: PropTypes.string,
   tabindex: PropTypes.number,
   children: PropTypes.node,
 };
 
 CalendarLink.propTypesMeta = {
+  isDownload: 'exclude',
   className: 'exclude',
   tabindex: 'exclude',
   children: 'exclude',

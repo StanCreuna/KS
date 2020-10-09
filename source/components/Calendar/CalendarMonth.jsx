@@ -48,6 +48,7 @@ const CalendarMonth = ({
     (isLinksPresent && externalLinks) || (isFilesPresent && downloadLinks);
   const evenLinks = linksList && linksList.filter((v, i) => i % 2);
   const oddLinks = linksList && linksList.filter((v, i) => !(i % 2));
+  const isDownloadLink = linksList && isLinksPresent ? false : true;
   const linkImage =
     (isLinksPresent && externalLinkImage) ||
     (isFilesPresent && downloadLinkImage);
@@ -87,7 +88,7 @@ const CalendarMonth = ({
                         className="calendar-month__footer-link-item"
                         key={index}
                       >
-                        <CalendarLink {...link}>
+                        <CalendarLink {...link} is-download={isDownloadLink}>
                           <span className="calendar-month__footer-link-icon-holder">
                             <CalendarIcon url={linkImage} />
                           </span>
@@ -101,7 +102,7 @@ const CalendarMonth = ({
                         className="calendar-month__footer-link-item"
                         key={index}
                       >
-                        <CalendarLink {...link}>
+                        <CalendarLink {...link} is-download={isDownloadLink}>
                           <span className="calendar-month__footer-link-icon-holder">
                             <CalendarIcon url={linkImage} />
                           </span>
