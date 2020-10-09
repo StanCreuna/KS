@@ -1,11 +1,9 @@
 {
-  "header": {
-    "heading1": "Kalender",
-    "heading2": "Aktivitet"
-  },
+  "heading": "Kalender",
   "monthDefault": {
     "inactiveLabel": "Ingen aktiviteter å vise",
-    "additionalInfoLabel": "Nedlastninger",
+    "additionalInfoDownloadsLabel": "Nedlastninger",
+    "additionalInfoLinksLabel": "Lenker",
     "attentionImage": "/static-site/assets/images/attention-image.svg",
     "fileImage": "/static-site/assets/images/file-image.svg",
     "dropdownImage": "/static-site/assets/images/dropdown-image.svg",
@@ -106,8 +104,8 @@
     },
     {
       "name": "Jul",
-      "customImage": "/static-site/assets/images/jul.png",
-      "customImageWidth": "51"
+      "customImage": "/static-site/assets/images/jul.svg",
+      "customImageWidth": "100"
     },
     {
       "name": "Aug",
@@ -171,12 +169,12 @@
     },
     {
       "name": "Test",
-      "customImage": "/static-site/assets/images/mar.png",
+      "customImage": "/static-site/assets/images/mar.svg",
       "customImageWidth": "130" 
     },
     {
       "name": "Test",
-      "customImage": "/static-site/assets/images/mai.png",
+      "customImage": "/static-site/assets/images/mai.svg",
       "customImageWidth": "82"
     }
   ]
