@@ -10,16 +10,18 @@ const CalendarMonth = ({
   textHtml,
   customImage,
   customImageWidth,
-  externalLinks,
-  downloadLinks,
+  links,
   inactiveLabel,
   additionalInfoDownloadsLabel,
   additionalInfoLinksLabel,
+  additionalInfoFullLabel,
   attentionImage,
   fileImage,
+  mixedImage,
   dropdownImage,
   monthInfoImage,
   monthFilesImage,
+  monthMixedImage,
   monthInactiveImage,
   externalLinkImage,
   downloadLinkImage,
@@ -30,34 +32,40 @@ const CalendarMonth = ({
     inactiveLabel &&
     additionalInfoDownloadsLabel &&
     additionalInfoLinksLabel &&
+    additionalInfoFullLabel &&
     attentionImage &&
     fileImage &&
+    mixedImage &&
     dropdownImage &&
     monthInfoImage &&
     monthFilesImage &&
+    monthMixedImage &&
     monthInactiveImage &&
     externalLinkImage &&
     downloadLinkImage;
 
   const isInactive = !heading;
-  const isLinksPresent = externalLinks && externalLinks.length > 0;
-  const isFilesPresent = downloadLinks && downloadLinks.length > 0;
+  const isLinksListFilled = links && links.length > 0;
+  const isLinksPresent =
+    isLinksListFilled && links.find(o => o.download === false);
+  const isFilesPresent =
+    isLinksListFilled && links.find(o => o.download === true);
   const isInformative = !isInactive && !isFilesPresent;
-  const isFooterFilled = isLinksPresent || isFilesPresent;
-  const linksList =
-    (isLinksPresent && externalLinks) || (isFilesPresent && downloadLinks);
-  const evenLinks = linksList && linksList.filter((v, i) => i % 2);
-  const oddLinks = linksList && linksList.filter((v, i) => !(i % 2));
-  const isDownloadLink = linksList && isLinksPresent ? false : true;
-  const linkImage =
-    (isLinksPresent && externalLinkImage) ||
-    (isFilesPresent && downloadLinkImage);
+  const evenLinks = isLinksListFilled && links.filter((v, i) => i % 2);
+  const oddLinks = isLinksListFilled && links.filter((v, i) => !(i % 2));
   const footerImage =
-    (isLinksPresent && attentionImage) || (isFilesPresent && fileImage);
+    (isLinksPresent && isFilesPresent && mixedImage) ||
+    (isLinksPresent && attentionImage) ||
+    (isFilesPresent && fileImage);
   const calendarIconUrl =
     (isInactive && monthInactiveImage) ||
+    (isFilesPresent && isLinksPresent && monthMixedImage) ||
     (isFilesPresent && monthFilesImage) ||
     (isInformative && monthInfoImage);
+  const footerLabel =
+    (isFilesPresent && isLinksPresent && additionalInfoFullLabel) ||
+    (isFilesPresent && additionalInfoDownloadsLabel) ||
+    (isInformative && additionalInfoLinksLabel);
 
   return (
     isVisible && (
@@ -74,12 +82,10 @@ const CalendarMonth = ({
               dropdownImage={dropdownImage}
               htmlId={id}
             />
-            {isFooterFilled && (
+            {isLinksListFilled && (
               <div className="calendar-month__footer">
                 <span className="calendar-month__footer-label">
-                  {isLinksPresent
-                    ? additionalInfoLinksLabel
-                    : additionalInfoDownloadsLabel}
+                  {footerLabel}
                 </span>
                 <div className="calendar-month__footer-links-list">
                   <div className="calendar-month__footer-links-odd">
@@ -88,9 +94,15 @@ const CalendarMonth = ({
                         className="calendar-month__footer-link-item"
                         key={index}
                       >
-                        <CalendarLink {...link} is-download={isDownloadLink}>
+                        <CalendarLink {...link}>
                           <span className="calendar-month__footer-link-icon-holder">
-                            <CalendarIcon url={linkImage} />
+                            <CalendarIcon
+                              url={
+                                link.download
+                                  ? downloadLinkImage
+                                  : externalLinkImage
+                              }
+                            />
                           </span>
                         </CalendarLink>
                       </div>
@@ -102,9 +114,15 @@ const CalendarMonth = ({
                         className="calendar-month__footer-link-item"
                         key={index}
                       >
-                        <CalendarLink {...link} is-download={isDownloadLink}>
+                        <CalendarLink {...link}>
                           <span className="calendar-month__footer-link-icon-holder">
-                            <CalendarIcon url={linkImage} />
+                            <CalendarIcon
+                              url={
+                                link.download
+                                  ? downloadLinkImage
+                                  : externalLinkImage
+                              }
+                            />
                           </span>
                         </CalendarLink>
                       </div>
@@ -144,16 +162,18 @@ CalendarMonth.propTypes = {
   textHtml: PropTypes.string,
   customImage: PropTypes.string,
   customImageWidth: PropTypes.string,
-  externalLinks: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
-  downloadLinks: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
+  links: PropTypes.arrayOf(PropTypes.exact(CalendarLink.propTypes)),
   inactiveLabel: PropTypes.string,
   additionalInfoDownloadsLabel: PropTypes.string,
   additionalInfoLinksLabel: PropTypes.string,
+  additionalInfoFullLabel: PropTypes.string,
   attentionImage: PropTypes.string,
   fileImage: PropTypes.string,
+  mixedImage: PropTypes.string,
   dropdownImage: PropTypes.string,
   monthInfoImage: PropTypes.string,
   monthFilesImage: PropTypes.string,
+  monthMixedImage: PropTypes.string,
   monthInactiveImage: PropTypes.string,
   externalLinkImage: PropTypes.string,
   downloadLinkImage: PropTypes.string,

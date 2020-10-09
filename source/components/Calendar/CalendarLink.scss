@@ -13,18 +13,14 @@
     line-height: 14px;
   }
 
-  &:hover,
-  &_active {
+  &:hover &__word,
+  &_active &__word {
     text-decoration: underline;
   }
 
   &__word {
     display: inline-block;
     vertical-align: top;
-    padding-right: 4px;
-
-    &:last-child {
-      padding-right: 0;
-    }
+    white-space: pre-wrap;
   }
 }

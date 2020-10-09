@@ -6,7 +6,7 @@ const CalendarLink = ({
   openInNewTab,
   url,
   text,
-  isDownload,
+  download,
   className,
   tabindex,
   children,
@@ -22,11 +22,11 @@ const CalendarLink = ({
       })}
       target={openInNewTab ? '_blank' : null}
       tabIndex={tabindex}
-      download={isDownload}
+      download={download}
     >
       {words.map((word, index) => (
         <span key={index} className="calendar-link__word">
-          {word}
+          {`${word} `}
           {lastWordIndex === index && children}
         </span>
       ))}
@@ -35,7 +35,7 @@ const CalendarLink = ({
     <Fragment>
       {words.map((word, index) => (
         <span key={index} className="calendar-link__word">
-          {word}
+          {`${word} `}
           {lastWordIndex === index && children}
         </span>
       ))}
@@ -47,14 +47,13 @@ CalendarLink.propTypes = {
   openInNewTab: PropTypes.bool,
   url: PropTypes.string,
   text: PropTypes.string,
-  isDownload: PropTypes.bool,
+  download: PropTypes.bool,
   className: PropTypes.string,
   tabindex: PropTypes.number,
   children: PropTypes.node,
 };
 
 CalendarLink.propTypesMeta = {
-  isDownload: 'exclude',
   className: 'exclude',
   tabindex: 'exclude',
   children: 'exclude',

@@ -155,12 +155,11 @@
 
   &__footer-icon-holder {
     position: absolute;
-    top: -10px;
+    bottom: -2px;
     right: 0;
     max-width: 60px;
 
     @include breakpoint-mobile {
-      top: 2px;
       max-width: 32px;
     }
   }

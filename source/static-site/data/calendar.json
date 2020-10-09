@@ -4,11 +4,14 @@
     "inactiveLabel": "Ingen aktiviteter å vise",
     "additionalInfoDownloadsLabel": "Nedlastninger",
     "additionalInfoLinksLabel": "Lenker",
+    "additionalInfoFullLabel": "Lenker og nedlastninger",
     "attentionImage": "/static-site/assets/images/attention-image.svg",
     "fileImage": "/static-site/assets/images/file-image.svg",
+    "mixedImage": "/static-site/assets/images/mixed-image.svg",
     "dropdownImage": "/static-site/assets/images/dropdown-image.svg",
     "monthInfoImage": "/static-site/assets/images/month-main-image-info.svg",
     "monthFilesImage": "/static-site/assets/images/month-main-image-files.svg",
+    "monthMixedImage": "/static-site/assets/images/month-main-image-mixed.svg",
     "monthInactiveImage": "/static-site/assets/images/month-main-image-inactive.svg",
     "externalLinkImage": "/static-site/assets/images/external-link-image.svg",
     "downloadLinkImage": "/static-site/assets/images/download-link-image.svg"
@@ -18,8 +21,9 @@
       "name": "Jan",
       "heading": "Kommunebrev og Mål- og disponeringsbrev",
       "textHtml": "Føringene i dokumentene kan brukes strategisk ved å løfte utvalgte grupper eller områder.",
-      "externalLinks": [
+      "links": [
         {
+          "download": false,
           "openInNewTab": true,
           "url": "https://www.google.com/",
           "text": "Les mer her"
@@ -30,20 +34,24 @@
       "name": "Feb",
       "heading": "Partnerskapsmøtene",
       "textHtml": "Nav-leder sikres tydelige forventinger ved egen lederavtale med eierne. Analyse av utfordringsbildet gir rask innsikt. Felles virksomhetsplan gjennomgås.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Felles virksomhetsplan"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Gjensidig lederavtale"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Modell for analyse (Norce)"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Veileder for inngåelse for partnerskapsavtale"
         }
@@ -53,20 +61,24 @@
       "name": "Mar",
       "heading": "Internkontroll",
       "textHtml": "Kommunedirektøren kan benytte ulike verktøy for internkontroll.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "https://www.google.com/",
           "text": "Verktøy for internkontroll"
         },
         {
+          "download": true,
           "url": "https://www.google.com/",
           "text": "Veileder for etablering av vertskommune"
         },
         {
+          "download": true,
           "url": "https://www.google.com/",
           "text": "Veikart for tjenesteinnovasjon"
         },
         {
+          "download": true,
           "url": "https://www.google.com/",
           "text": "Fylkesmannens oppfølging"
         }
@@ -76,8 +88,9 @@
       "name": "Apr",
       "heading": "Nav-kontorets arbeid på politisk dagorden.",
       "textHtml": "Politisk ledelse i kommunen må ha kunnskap om Nav-kontorets utfordringer. Kjennskap til tjenestetilbud og rammer kan styrke det politiske eierskapet i kommune.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "https://www.google.com/",
           "text": "Folkevalgtprogrammet"
         }
@@ -102,8 +115,9 @@
       "name": "Aug",
       "heading": "Analyser utfordringene for Nav-kontoret.",
       "textHtml": "En analyse av partnerskapet gir et raskt overblikk over utfordringene.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Modell for analyse (Norce)"
         }
@@ -113,20 +127,24 @@
       "name": "Sept",
       "heading": "Partnerskapsmøtene",
       "textHtml": "Nav-leder sikres tydelige forventinger ved egen lederavtale med eierne. Analyse av utfordringsbildet gir rask innsikt. Felles virksomhetsplan gjennomgås.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Felles virksomhetsplan"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Gjensidig lederavtale"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Modell for analyse (Norce)"
         },
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Veileder for inngåelse for partnerskapsavtale"
         }
@@ -141,8 +159,9 @@
       "name": "Nov",
       "heading": "Nav-kontorets arbeid på politisk dagorden.",
       "textHtml": "Politisk ledelse i kommunen må ha kunnskap om Nav-kontorets utfordringer. Kjennskap til tjenestetilbud og rammer kan styrke det politiske eierskapet i kommune.",
-      "downloadLinks": [
+      "links": [
         {
+          "download": true,
           "url": "/static-site/assets/images/attention-image.svg",
           "text": "Folkevalgtprogrammet"
         }
@@ -161,6 +180,24 @@
       "name": "Test",
       "customImage": "/static-site/assets/images/mai.svg",
       "customImageWidth": "82"
+    },
+    {
+      "name": "Mix",
+      "heading": "Mixed Month",
+      "textHtml": "This block contains two types of links (files / external)",
+      "links": [
+        {
+          "download": false,
+          "openInNewTab": true,
+          "url": "https://www.google.com/",
+          "text": "Les mer her"
+        },
+        {
+          "download": true,
+          "url": "/static-site/assets/images/attention-image.svg",
+          "text": "Folkevalgtprogrammet"
+        }
+      ]
     }
   ]
 }
