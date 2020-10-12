@@ -51,8 +51,6 @@ const CalendarMonth = ({
   const isFilesPresent =
     isLinksListFilled && links.find(o => o.download === true);
   const isInformative = !isInactive && !isFilesPresent;
-  const evenLinks = isLinksListFilled && links.filter((v, i) => i % 2);
-  const oddLinks = isLinksListFilled && links.filter((v, i) => !(i % 2));
   const footerImage =
     (isLinksPresent && isFilesPresent && mixedImage) ||
     (isLinksPresent && attentionImage) ||
@@ -88,46 +86,24 @@ const CalendarMonth = ({
                   {footerLabel}
                 </span>
                 <div className="calendar-month__footer-links-list">
-                  <div className="calendar-month__footer-links-odd">
-                    {oddLinks.map((link, index) => (
-                      <div
-                        className="calendar-month__footer-link-item"
-                        key={index}
-                      >
-                        <CalendarLink {...link}>
-                          <span className="calendar-month__footer-link-icon-holder">
-                            <CalendarIcon
-                              url={
-                                link.download
-                                  ? downloadLinkImage
-                                  : externalLinkImage
-                              }
-                            />
-                          </span>
-                        </CalendarLink>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="calendar-month__footer-links-even">
-                    {evenLinks.map((link, index) => (
-                      <div
-                        className="calendar-month__footer-link-item"
-                        key={index}
-                      >
-                        <CalendarLink {...link}>
-                          <span className="calendar-month__footer-link-icon-holder">
-                            <CalendarIcon
-                              url={
-                                link.download
-                                  ? downloadLinkImage
-                                  : externalLinkImage
-                              }
-                            />
-                          </span>
-                        </CalendarLink>
-                      </div>
-                    ))}
-                  </div>
+                  {links.map((link, index) => (
+                    <div
+                      className="calendar-month__footer-link-item"
+                      key={index}
+                    >
+                      <CalendarLink {...link}>
+                        <span className="calendar-month__footer-link-icon-holder">
+                          <CalendarIcon
+                            url={
+                              link.download
+                                ? downloadLinkImage
+                                : externalLinkImage
+                            }
+                          />
+                        </span>
+                      </CalendarLink>
+                    </div>
+                  ))}
                 </div>
                 <div className="calendar-month__footer-icon-holder">
                   <CalendarIcon url={footerImage} />

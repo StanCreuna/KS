@@ -24,21 +24,13 @@ const CalendarLink = ({
       tabIndex={tabindex}
       download={download}
     >
-      {words.map((word, index) => (
-        <span key={index} className="calendar-link__word">
-          {`${word} `}
-          {lastWordIndex === index && children}
-        </span>
-      ))}
+      {text}
+      {children}
     </a>
   ) : (
     <Fragment>
-      {words.map((word, index) => (
-        <span key={index} className="calendar-link__word">
-          {`${word} `}
-          {lastWordIndex === index && children}
-        </span>
-      ))}
+      {text}
+      {children}
     </Fragment>
   );
 };

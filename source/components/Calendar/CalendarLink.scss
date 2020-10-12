@@ -13,14 +13,8 @@
     line-height: 14px;
   }
 
-  &:hover &__word,
-  &_active &__word {
+  &:hover,
+  &_active {
     text-decoration: underline;
-  }
-
-  &__word {
-    display: inline-block;
-    vertical-align: top;
-    white-space: pre-wrap;
   }
 }
